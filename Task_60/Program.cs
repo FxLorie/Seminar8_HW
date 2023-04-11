@@ -33,7 +33,8 @@ void Print3DMatrixInt(int[,,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for (int z = 0; z < matrix.GetLength(2); z++)
-                Console.WriteLine($"matrix[{i}, {j}, {z}] = {matrix[i, j, z]}");
+                Console.Write($"{matrix[i, j, z]}({i}, {j}, {z}) \t");
+            Console.WriteLine();
         }
     }
 }
