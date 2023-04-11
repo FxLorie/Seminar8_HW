@@ -19,8 +19,7 @@ void Input3DMatrixInt(int[,,] matrix)
         {
             for (int z = 0; z < matrix.GetLength(2); z++)
             {
-                if (k < 100)
-                    matrix[i, j, z] = k;
+                matrix[i, j, z] = k;
                 k++;
             }
         }
@@ -41,9 +40,9 @@ void Print3DMatrixInt(int[,,] matrix)
 
 Console.Clear();
 int[,,] matrix = Create3DMatrixInt();
-if(matrix.GetLength(0)*matrix.GetLength(1)*matrix.GetLength(2)<90)
+if (matrix.GetLength(0) * matrix.GetLength(1) * matrix.GetLength(2) < 90)
 {
-Input3DMatrixInt(matrix);
-Print3DMatrixInt(matrix);
+    Input3DMatrixInt(matrix);
+    Print3DMatrixInt(matrix);
 }
 else Console.WriteLine("Создать подобную матрицу с неповторяющимися значениями невозможно");
