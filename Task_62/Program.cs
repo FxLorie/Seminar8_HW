@@ -19,26 +19,25 @@ void InputMatrixInt(int[,] matrix)
             matrix[i, j] = k;
             k++;
         }
-        for (int j = matrix.GetLength(1) - 1 - count; i < matrix.GetLength(0) - count; i++)
+        for (int j = matrix.GetLength(1) - 1 - count; i < matrix.GetLength(0) - 1 - count; i++)
         {
             matrix[i, j] = k;
             k++;
         }
-        i = matrix.GetLength(0) - 1 - count;
-        for (int j = matrix.GetLength(1) - 2 - count; j >= 0 + count; j--)
+        for (int j = matrix.GetLength(1) - 1 - count; j > count; j--)
         {
             matrix[i, j] = k;
             k++;
         }
-        i = matrix.GetLength(0) - 2 - count;
-        for (int j = count; i > 0 + count; i--)
+        for (int j = count; i > count; i--)
         {
             matrix[i, j] = k;
             k++;
         }
-        i = count;
         count++;
     }
+    if (matrix.GetLength(0) % 2 != 0)
+        matrix[matrix.GetLength(0) / 2, matrix.GetLength(1) / 2] = k;
 }
 
 void PrintMatrixInt(int[,] matrix)
